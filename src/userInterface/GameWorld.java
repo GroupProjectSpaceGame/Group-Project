@@ -1,3 +1,4 @@
+package userInterface;
 import java.util.Random;
 
 import GameBackend.Areas.Area;

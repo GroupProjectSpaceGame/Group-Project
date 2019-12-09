@@ -1,3 +1,4 @@
+package userInterface;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -52,6 +53,13 @@ public class MainMenu {
 		frame.getContentPane().setLayout(null);
 		
 		JButton btnPlay = new JButton("PLAY");
+		btnPlay.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				InGame nw = new InGame();
+				nw.nextWindow();
+			}
+		});
+		
 		btnPlay.setBackground(UIManager.getColor("Button.shadow"));
 		btnPlay.setBounds(175, 85, 89, 23);
 		frame.getContentPane().add(btnPlay);
