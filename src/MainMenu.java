@@ -9,6 +9,8 @@ import java.awt.Color;
 import javax.swing.UIManager;
 import java.awt.Font;
 import javax.swing.DropMode;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class MainMenu {
 
@@ -55,6 +57,11 @@ public class MainMenu {
 		frame.getContentPane().add(btnPlay);
 		
 		JButton btnExit = new JButton("EXIT");
+		btnExit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				System.exit(0);
+			}
+		});
 		btnExit.setBackground(UIManager.getColor("Button.shadow"));
 		btnExit.setBounds(175, 185, 89, 23);
 		frame.getContentPane().add(btnExit);
