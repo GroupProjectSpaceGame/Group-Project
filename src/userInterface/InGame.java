@@ -1,9 +1,11 @@
 package userInterface;
 import java.awt.EventQueue;
+import java.awt.Image;
 
 import javax.swing.JFrame;
 import java.awt.Color;
 import javax.swing.JMenu;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPopupMenu;
 import java.awt.Component;
@@ -13,6 +15,7 @@ import javax.swing.JMenuItem;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JMenuBar;
+import javax.swing.JLabel;
 
 
 public class InGame {
@@ -92,6 +95,12 @@ public class InGame {
 		});
 		btnMyship.setBounds(172, 205, 89, 23);
 		frame.getContentPane().add(btnMyship);
+		
+		JLabel lblNewLabel = new JLabel("New label");
+		Image img = new ImageIcon(this.getClass().getResource("/planet.png")).getImage();
+		lblNewLabel.setIcon(new ImageIcon(img));
+		lblNewLabel.setBounds(10, 54, 632, 640);
+		frame.getContentPane().add(lblNewLabel);
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
