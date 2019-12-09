@@ -1,4 +1,4 @@
-package gameBackend.Cargos;
+package GameBackend.Cargos;
 
 public class Cargo {
 

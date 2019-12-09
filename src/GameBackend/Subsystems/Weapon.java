@@ -1,4 +1,4 @@
-package gameBackend.Subsystems;
+package GameBackend.Subsystems;
 
 public class Weapon extends Subsystem {
 

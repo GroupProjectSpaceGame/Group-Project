@@ -1,4 +1,4 @@
-package gameBackend.Vessels;
+package GameBackend.Vessels;
 
 public class Ship extends Vessel {
 

@@ -1,4 +1,4 @@
-package gameBackend.Areas;
+package GameBackend.Areas;
 
 public class HazardArea extends Area {
 
