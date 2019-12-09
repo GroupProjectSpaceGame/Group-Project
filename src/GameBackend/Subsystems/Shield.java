@@ -17,7 +17,7 @@ public class Shield extends Subsystem {
 	}
 	
 	public void addShieldValue(int addvalue) {
-		shieldValue += addvalue;
+		// stub for extending
 	}
 	
 }
