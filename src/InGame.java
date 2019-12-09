@@ -9,6 +9,8 @@ import java.awt.Component;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JMenuItem;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 
 public class InGame {
@@ -46,13 +48,18 @@ public class InGame {
 		frame.getContentPane().setBackground(Color.BLUE);
 		frame.getContentPane().setLayout(null);
 		
-		JMenu mnEnemyship = new JMenu("EnemyShip1");
+		final JMenu mnEnemyship = new JMenu("EnemyShip1");
+		mnEnemyship.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				JMenuItem mntmAttack = new JMenuItem("Attack");
+				mnEnemyship.add(mntmAttack);
+			}
+		});
 		mnEnemyship.setForeground(Color.YELLOW);
 		mnEnemyship.setBounds(10, 11, 107, 22);
 		frame.getContentPane().add(mnEnemyship);
 		
-		JMenuItem mntmAttack = new JMenuItem("Attack");
-		mnEnemyship.add(mntmAttack);
+
 		
 		JMenu mnEnemyship_2 = new JMenu("EnemyShip2");
 		mnEnemyship_2.setForeground(Color.YELLOW);

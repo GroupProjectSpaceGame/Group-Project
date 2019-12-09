@@ -46,7 +46,9 @@ public class Vessel {
 		return currentShields;
 	}
 	
-	
+	public void addSubsystem(Subsystem newSubsystem) {
+		currentSubsystems.add(newSubsystem);
+	}
 	
 	public void consumeBooster(Booster targetBooster) {
 		if (currentCargo.contains(targetBooster)) {
