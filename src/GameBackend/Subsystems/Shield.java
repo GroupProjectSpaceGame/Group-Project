@@ -16,5 +16,9 @@ public class Shield extends Subsystem {
 		return shieldValue;
 	}
 	
+	public void addShieldValue(int addvalue) {
+		shieldValue += addvalue;
+	}
+	
 }
 
