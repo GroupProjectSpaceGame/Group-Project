@@ -102,15 +102,32 @@ public class Vessel {
 	}
 
 	public void damageCargo(int damage) {
-		
 		if (currentCargo.size() > 0) {
 			while (damage > 0) {
-//				if ((1/rand.nextInt(Math.log10(damage))) > 0) {
-//					
-//				}
-				// currentCargo.get(rand.nextInt(currentCargo.size()))
+				double randomValue = rand.nextDouble();
+				double threshold = (Math.log10(damage))*0.5;
+				if (randomValue <= threshold) {
+					currentCargo.remove(currentCargo.get(rand.nextInt(currentCargo.size())));
+					damage = (int) (threshold - randomValue); 
+				} else {
+					damage = 0;
+				}
 			}
 		}
 	}
 
+	public void damageSubsystem(int damage) {
+		if (currentSubsystems.size() > 0) {
+			while (damage > 0) {
+				double randomValue = rand.nextDouble();
+				double threshold = (Math.log10(damage))*0.5;
+				if (randomValue <= threshold) {
+					currentSubsystems.remove(currentSubsystems.get(rand.nextInt(currentSubsystems.size())));
+					damage = (int) (threshold - randomValue); 
+				} else {
+					damage = 0;
+				}
+			}
+		}
+	}
 }
