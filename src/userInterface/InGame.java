@@ -23,10 +23,12 @@ import java.net.URL;
 
 import javax.swing.JMenuBar;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.Icon;
 import javax.swing.JRadioButton;
+import javax.swing.JCheckBox;
 
 
 public class InGame {
@@ -71,63 +73,8 @@ public class InGame {
 		
 		JLabel lblNewLabel = new JLabel(ufo);
 		lblNewLabel.setBackground(Color.BLACK);
-		lblNewLabel.setBounds(20, 59, 74, 51);
+		lblNewLabel.setBounds(172, 40, 89, 51);
 		frame.getContentPane().add(lblNewLabel);
-		
-		JLabel label = new JLabel((Icon) ufo);
-		label.setBackground(Color.BLACK);
-		label.setBounds(103, 59, 74, 51);
-		frame.getContentPane().add(label);
-		
-		JLabel label_1 = new JLabel((Icon) ufo);
-		label_1.setBackground(Color.BLACK);
-		label_1.setBounds(187, 59, 74, 51);
-		frame.getContentPane().add(label_1);
-		
-		JLabel label_2 = new JLabel((Icon) ufo);
-		label_2.setBackground(Color.BLACK);
-		label_2.setBounds(271, 59, 74, 51);
-		frame.getContentPane().add(label_2);
-		
-		JLabel label_3 = new JLabel((Icon) ufo);
-		label_3.setBackground(Color.BLACK);
-		label_3.setBounds(350, 59, 74, 51);
-		frame.getContentPane().add(label_3);
-		
-		
-		JMenuBar menuBar = new JMenuBar();
-		menuBar.setBounds(20, 22, 404, 21);
-		frame.getContentPane().add(menuBar);
-		
-		JMenu mnEnemyship = new JMenu("enemyShip1");
-		menuBar.add(mnEnemyship);
-		
-		JRadioButton rdbtnAttack = new JRadioButton("Attack");
-		mnEnemyship.add(rdbtnAttack);
-		
-		JMenu mnEnemyship_1 = new JMenu("enemyShip2");
-		menuBar.add(mnEnemyship_1);
-		
-		JRadioButton radioButton = new JRadioButton("Attack");
-		mnEnemyship_1.add(radioButton);
-		
-		JMenu mnEnemyship_2 = new JMenu("enemyShip3");
-		menuBar.add(mnEnemyship_2);
-		
-		JRadioButton radioButton_1 = new JRadioButton("Attack");
-		mnEnemyship_2.add(radioButton_1);
-		
-		JMenu mnEnemyship_3 = new JMenu("enemyShip4");
-		menuBar.add(mnEnemyship_3);
-		
-		JRadioButton radioButton_2 = new JRadioButton("Attack");
-		mnEnemyship_3.add(radioButton_2);
-		
-		JMenu mnEnemyship_4 = new JMenu("enemyShip5");
-		menuBar.add(mnEnemyship_4);
-		
-		JRadioButton radioButton_3 = new JRadioButton("Attack");
-		mnEnemyship_4.add(radioButton_3);
 		
 		JButton btnMyship = new JButton("myShip");
 		btnMyship.addActionListener(new ActionListener() {
@@ -166,6 +113,27 @@ public class InGame {
 		textField_2.setBounds(338, 206, 86, 20);
 		frame.getContentPane().add(textField_2);
 		textField_2.setColumns(10);
+		
+		JCheckBox chckbxTarget = new JCheckBox("Target");
+		chckbxTarget.setBackground(Color.BLUE);
+		chckbxTarget.setBounds(164, 98, 97, 23);
+		frame.getContentPane().add(chckbxTarget);
+		final boolean checked = chckbxTarget.isSelected();
+		
+		final JButton btnAttack = new JButton("Attack");
+		btnAttack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if(checked){
+					String attackMsg = "Attacked!";
+					JOptionPane.showMessageDialog(btnAttack, attackMsg);
+				}else{
+					String failMsg = "You didn't select a target";
+					JOptionPane.showMessageDialog(btnAttack, failMsg);
+				}
+			}
+		});
+		btnAttack.setBounds(335, 180, 89, 23);
+		frame.getContentPane().add(btnAttack);
 		
 
 		
