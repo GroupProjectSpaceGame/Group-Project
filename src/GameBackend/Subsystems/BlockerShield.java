@@ -1,6 +1,7 @@
 package GameBackend.Subsystems;
 
 import GameBackend.Vessels.Vessel;
+import javafx.util.Pair;
 
 public class BlockerShield extends Shield {
 
@@ -13,12 +14,17 @@ public class BlockerShield extends Shield {
 	}
 	
 	@Override
-	public void addShieldValue(int addvalue) {
+	public int addShieldValue(int addvalue) {
+		int overflow = 0;
 		if (addvalue > 0) {
 			this.shieldValue += (Math.floor(Math.cbrt(addvalue)) + 1);
 		} else if (addvalue < 0) {
 			this.shieldValue -= 1;
 		}
+		if (this.shieldValue <= 0) {
+			overflow = (this.shieldValue);
+		}
+		return overflow;
 	}
 
 }
