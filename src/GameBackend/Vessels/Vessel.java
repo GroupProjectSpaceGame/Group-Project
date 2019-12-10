@@ -8,6 +8,7 @@ import GameBackend.Cargos.Booster;
 import GameBackend.Cargos.Cargo;
 import GameBackend.Subsystems.Shield;
 import GameBackend.Subsystems.Subsystem;
+import GameBackend.Subsystems.Weapon;
 
 public class Vessel {
 
@@ -52,6 +53,16 @@ public class Vessel {
 			}
 		}
 		return currentShields;
+	}
+	
+	public ArrayList<Weapon> getWeapons() {
+		ArrayList<Weapon> currentWeapons = new ArrayList<>(); 
+		for (Subsystem instWeapon : getSubsystems()) {
+			if (instWeapon.getClass() == Weapon.class) {
+				currentWeapons.add((Weapon) instWeapon);
+			}
+		}
+		return currentWeapons;
 	}
 	
 	public void addSubsystem(Subsystem newSubsystem) {
@@ -130,4 +141,13 @@ public class Vessel {
 			}
 		}
 	}
+	
+	public int getShieldsTotal() {
+		int totalShields = 0;
+		for (Shield instShield : this.getShields()) {
+			totalShields += instShield.getShieldValue();
+		}
+		return totalShields;
+	}
+
 }
