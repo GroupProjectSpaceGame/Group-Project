@@ -10,8 +10,11 @@ import java.awt.Color;
 import javax.swing.UIManager;
 import java.awt.Font;
 import javax.swing.DropMode;
+import javax.swing.ImageIcon;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
 
 public class MainMenu {
 
@@ -59,6 +62,11 @@ public class MainMenu {
 				InGame.nextWindow();
 			}
 		});
+		
+		ImageIcon bckgrnd = new ImageIcon ("./1.png");
+		JLabel lblNewLabel = new JLabel(bckgrnd);
+		lblNewLabel.setBounds(0, 0, 434, 261);
+		frame.getContentPane().add(lblNewLabel);
 		
 		btnPlay.setBackground(UIManager.getColor("Button.shadow"));
 		btnPlay.setBounds(175, 85, 89, 23);

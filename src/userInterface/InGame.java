@@ -73,7 +73,7 @@ public class InGame {
 		
 		JLabel lblNewLabel = new JLabel(ufo);
 		lblNewLabel.setBackground(Color.BLACK);
-		lblNewLabel.setBounds(172, 40, 89, 51);
+		lblNewLabel.setBounds(164, 41, 89, 51);
 		frame.getContentPane().add(lblNewLabel);
 		
 		JButton btnMyship = new JButton("myShip");
@@ -103,14 +103,14 @@ public class InGame {
 		textField_1.setForeground(Color.YELLOW);
 		textField_1.setColumns(10);
 		textField_1.setBackground(Color.BLUE);
-		textField_1.setBounds(338, 230, 86, 20);
+		textField_1.setBounds(10, 206, 86, 20);
 		frame.getContentPane().add(textField_1);
 		
 		textField_2 = new JTextField();
 		textField_2.setBackground(Color.BLUE);
 		textField_2.setHorizontalAlignment(SwingConstants.CENTER);
 		textField_2.setText("100/100");
-		textField_2.setBounds(338, 206, 86, 20);
+		textField_2.setBounds(335, 230, 86, 20);
 		frame.getContentPane().add(textField_2);
 		textField_2.setColumns(10);
 		
@@ -118,9 +118,9 @@ public class InGame {
 		chckbxTarget.setBackground(Color.BLUE);
 		chckbxTarget.setBounds(164, 98, 97, 23);
 		frame.getContentPane().add(chckbxTarget);
-		final boolean checked = chckbxTarget.isSelected();
+		boolean checked = chckbxTarget.isSelected();
 		
-		final JButton btnAttack = new JButton("Attack");
+		JButton btnAttack = new JButton("Attack");
 		btnAttack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if(checked){
@@ -132,7 +132,7 @@ public class InGame {
 				}
 			}
 		});
-		btnAttack.setBounds(335, 180, 89, 23);
+		btnAttack.setBounds(335, 205, 86, 23);
 		frame.getContentPane().add(btnAttack);
 		
 
