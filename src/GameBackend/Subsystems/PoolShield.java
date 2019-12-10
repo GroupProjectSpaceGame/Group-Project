@@ -12,8 +12,15 @@ public class PoolShield extends Shield {
 	}
 	
 	@Override
-	public void addShieldValue(int addvalue) {
+	public int addShieldValue(int addvalue) {
+		int overflow = 0;
 		this.shieldValue += addvalue;
+		if (this.shieldValue <= 0) {
+			overflow = (this.shieldValue);
+		} else {
+			overflow = 1;
+		}
+		return overflow;
 	}
 
 }

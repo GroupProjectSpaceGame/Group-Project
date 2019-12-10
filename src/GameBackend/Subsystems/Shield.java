@@ -1,6 +1,7 @@
 package GameBackend.Subsystems;
 
 import GameBackend.Vessels.Vessel;
+import javafx.util.Pair;
 
 public class Shield extends Subsystem {
 
@@ -16,7 +17,8 @@ public class Shield extends Subsystem {
 		return shieldValue;
 	}
 	
-	public void addShieldValue(int addvalue) {
+	public int addShieldValue(int addvalue) {
+		return 0;
 		// stub for extending
 	}
 	

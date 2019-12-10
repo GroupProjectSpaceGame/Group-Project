@@ -1,6 +1,7 @@
 package GameBackend.Vessels;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import GameBackend.Areas.Area;
 import GameBackend.Cargos.Booster;
@@ -10,7 +11,10 @@ import GameBackend.Subsystems.Subsystem;
 
 public class Vessel {
 
-	private int expLevel = 0;
+	Random rand = new Random(System.currentTimeMillis());
+	
+	boolean alive = true;
+	private int health = 0;
 	private Area currentArea = null; 
 	private ArrayList<Cargo> currentCargo = new ArrayList<>();
 	private ArrayList<Subsystem> currentSubsystems = new ArrayList<>();
@@ -24,8 +28,12 @@ public class Vessel {
 		return currentArea;
 	}
 	
-	public int getLevel() {
-		return expLevel;
+	public int getHealth() {
+		return health;
+	}
+	
+	public boolean isAlive() {
+		return alive;
 	}
 	
 	public ArrayList<Cargo> getCargo() {
@@ -56,5 +64,53 @@ public class Vessel {
 			currentCargo.remove(targetBooster);
 		}
 	}
+
+	public void modifyHP(int input) {
+		if (this.getShields().size() > 0) {
+			int overflow = input;
+			for (Shield instShield : this.getShields()) {
+				overflow = instShield.addShieldValue(overflow);
+				if (overflow <= 0) {
+					currentSubsystems.remove(instShield);
+				}
+			}
+			health += overflow;
+			if (health <= 0) {
+				alive = false;
+			}
+		}
+	}
+
+	public void modifyShields(int input) {
+		if (this.getShields().size() > 0) {
+			int overflow = input;
+			for (Shield instShield : this.getShields()) {
+				overflow = instShield.addShieldValue(overflow);
+				if (overflow <= 0) {
+					currentSubsystems.remove(instShield);
+				}
+			}
+		}
+	}
+
+	public void modifyHealth(int input) {
+		health += input;
+		if (health <= 0) {
+			alive = false;
+		}
 	
+	}
+
+	public void damageCargo(int damage) {
+		
+		if (currentCargo.size() > 0) {
+			while (damage > 0) {
+//				if ((1/rand.nextInt(Math.log10(damage))) > 0) {
+//					
+//				}
+				// currentCargo.get(rand.nextInt(currentCargo.size()))
+			}
+		}
+	}
+
 }
