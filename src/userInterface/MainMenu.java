@@ -55,8 +55,8 @@ public class MainMenu {
 		JButton btnPlay = new JButton("PLAY");
 		btnPlay.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				InGame nw = new InGame();
-				nw.nextWindow();
+				frame.setVisible(false);
+				InGame.nextWindow();
 			}
 		});
 		
