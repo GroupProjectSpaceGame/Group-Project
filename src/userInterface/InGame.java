@@ -26,6 +26,7 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.Icon;
+import javax.swing.JRadioButton;
 
 
 public class InGame {
@@ -101,32 +102,32 @@ public class InGame {
 		JMenu mnEnemyship = new JMenu("enemyShip1");
 		menuBar.add(mnEnemyship);
 		
-		JMenuItem mntmAttack = new JMenuItem("Attack");
-		mnEnemyship.add(mntmAttack);
+		JRadioButton rdbtnAttack = new JRadioButton("Attack");
+		mnEnemyship.add(rdbtnAttack);
 		
 		JMenu mnEnemyship_1 = new JMenu("enemyShip2");
 		menuBar.add(mnEnemyship_1);
 		
-		JMenuItem menuItem = new JMenuItem("Attack");
-		mnEnemyship_1.add(menuItem);
+		JRadioButton radioButton = new JRadioButton("Attack");
+		mnEnemyship_1.add(radioButton);
 		
 		JMenu mnEnemyship_2 = new JMenu("enemyShip3");
 		menuBar.add(mnEnemyship_2);
 		
-		JMenuItem menuItem_1 = new JMenuItem("Attack");
-		mnEnemyship_2.add(menuItem_1);
+		JRadioButton radioButton_1 = new JRadioButton("Attack");
+		mnEnemyship_2.add(radioButton_1);
 		
 		JMenu mnEnemyship_3 = new JMenu("enemyShip4");
 		menuBar.add(mnEnemyship_3);
 		
-		JMenuItem menuItem_2 = new JMenuItem("Attack");
-		mnEnemyship_3.add(menuItem_2);
+		JRadioButton radioButton_2 = new JRadioButton("Attack");
+		mnEnemyship_3.add(radioButton_2);
 		
 		JMenu mnEnemyship_4 = new JMenu("enemyShip5");
 		menuBar.add(mnEnemyship_4);
 		
-		JMenuItem menuItem_3 = new JMenuItem("Attack");
-		mnEnemyship_4.add(menuItem_3);
+		JRadioButton radioButton_3 = new JRadioButton("Attack");
+		mnEnemyship_4.add(radioButton_3);
 		
 		JButton btnMyship = new JButton("myShip");
 		btnMyship.addActionListener(new ActionListener() {
