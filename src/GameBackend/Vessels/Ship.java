@@ -9,5 +9,4 @@ public class Ship extends Vessel {
 		// TODO Auto-generated constructor stub
 	}
 
-
 }

@@ -21,5 +21,19 @@ public class Area {
 	public ArrayList<Cargo> getCargoList() {
 		return cargoHere;
 	}
+
+	public void addVessel(Vessel newVessel) {
+		vesselsHere.add(newVessel);
+	}
+	
+	public void addCargo(Cargo newCargo) {
+		cargoHere.add(newCargo);
+	}
+	
+	@Override
+	public String toString() {
+		return "an area containing " + vesselsHere.size() + " ships and " + cargoHere.size() + " pieces of cargo";
+	}
+	
 	
 }
