@@ -53,9 +53,9 @@ public class Weapon extends Subsystem {
 			if (damageType == 3) {
 				instTarget.modifyHealth(-damage);
 			}
-//			if (damageType == 4) {
-//				instTarget.damageSubsystem(damage);
-//			}
+			if (damageType == 4) {
+				instTarget.damageSubsystem(damage);
+			}
 			if (damageType == 5) {
 				instTarget.damageCargo(damage);
 			}
