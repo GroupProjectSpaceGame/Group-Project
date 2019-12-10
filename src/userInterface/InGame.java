@@ -66,7 +66,7 @@ public class InGame {
 		frame.getContentPane().setBackground(Color.BLUE);
 		frame.getContentPane().setLayout(null);
 		
-		ImageIcon ufo = new ImageIcon("//napier-mail.napier.ac.uk/students/school of computing/user data/40455050/GitHub/Group-Project/imgs/ufo.png");
+		ImageIcon ufo = new ImageIcon("./ufo.png");
 		
 		JLabel lblNewLabel = new JLabel(ufo);
 		lblNewLabel.setBackground(Color.BLACK);
