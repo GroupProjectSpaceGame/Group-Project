@@ -131,7 +131,8 @@ public class InGame {
 		JButton btnMyship = new JButton("myShip");
 		btnMyship.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				ShipInventory nxt = new ShipInventory();
+				nxt.inventoryWindow();
 			}
 		});
 		
