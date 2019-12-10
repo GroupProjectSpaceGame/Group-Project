@@ -7,6 +7,7 @@ import java.awt.Color;
 import javax.swing.JList;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
+import javax.swing.JMenuItem;
 
 public class ShipInventory {
 
@@ -14,6 +15,7 @@ public class ShipInventory {
 
 	/**
 	 * Launch the application.
+	 * @return 
 	 */
 	public static void inventoryWindow() {
 		EventQueue.invokeLater(new Runnable() {
@@ -50,5 +52,8 @@ public class ShipInventory {
 		
 		JMenu mnWeapons = new JMenu("Weapons");
 		menuBar.add(mnWeapons);
+		
+		JMenuItem mntmWeapon = new JMenuItem("Weapon1");
+		mnWeapons.add(mntmWeapon);
 	}
 }
