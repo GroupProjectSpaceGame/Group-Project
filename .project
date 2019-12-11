@@ -16,6 +16,21 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>imgs/1.jpg</name>
+			<type>1</type>
+			<location>//napier-mail.napier.ac.uk/students/School of Computing/User Data/40439919/GroupProject/Group-Project/1.jpg</location>
+		</link>
+		<link>
+			<name>imgs/interior.jpg</name>
+			<type>1</type>
+			<location>//napier-mail.napier.ac.uk/students/School of Computing/User Data/40439919/GroupProject/Group-Project/interior.jpg</location>
+		</link>
+		<link>
+			<name>imgs/planet.png</name>
+			<type>1</type>
+			<location>//napier-mail.napier.ac.uk/students/School of Computing/User Data/40439919/GroupProject/Group-Project/planet.png</location>
+		</link>
+		<link>
 			<name>imgs/ufo.png</name>
 			<type>1</type>
 			<location>//napier-mail.napier.ac.uk/students/School of Computing/User Data/40439919/GitHub/Group-Project/ufo.png</location>
